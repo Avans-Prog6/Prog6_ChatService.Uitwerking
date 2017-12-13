@@ -28,13 +28,12 @@ namespace ChatConsole
                 ChatService.Message message = new ChatService.Message()
                 {
                     Content = line,
+                    TimeStamp = DateTime.Now,
                     User = name,
                 };
                 messages = service.SendMessage(message);
                 PrintMessages(messages);
                 line = Console.ReadLine();
-
-
             }
         }
 
